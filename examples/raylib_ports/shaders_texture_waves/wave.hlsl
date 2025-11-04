@@ -11,14 +11,14 @@ cbuffer constants : register(b0) {
 	float speedY;
 }
 struct vs_in {
-	float3 position : POS;
-	float2 uv       : UV;
-	float4 color    : COL;
+	float3 position : position;
+	float2 uv       : texcoord;
+	float4 color    : color;
 };
 struct vs_out {
 	float4 position : SV_POSITION;
-	float2 uv       : UV;
-	float4 color    : COL;
+	float2 uv       : texcoord;
+	float4 color    : color;
 };
 Texture2D    tex : register(t0);
 SamplerState smp : register(s0);
